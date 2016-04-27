@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Sprites/Andre Test.unity
+- path: Assets/particletest.unity
   isLoaded: 1
   isActive: 1
