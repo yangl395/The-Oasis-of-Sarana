@@ -24,11 +24,15 @@ public class movePlayer : MonoBehaviour {
 	void Update () {
 
 		if (Input.GetAxis ("Horizontal") > 0) {
+			GetComponent<Animator> ().Play ("WalkAnimation");
 			transform.localScale = new Vector3 (xscale, transform.localScale.y, transform.localScale.z);
 			transform.Translate (Vector3.right * velocity * Time.deltaTime);
 		} else if (Input.GetAxis ("Horizontal") < 0) {
+			GetComponent<Animator> ().Play ("WalkAnimation");
 			transform.localScale = new Vector3 (-xscale, transform.localScale.y, transform.localScale.z);
 			transform.Translate (-Vector3.right * velocity * Time.deltaTime);
+		} else {
+			GetComponent<Animator> ().Play ("Idle Animation");
 		}
 
 		if (Input.GetAxis ("Vertical") > 0) {
