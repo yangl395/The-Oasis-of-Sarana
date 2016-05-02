@@ -9,6 +9,7 @@ public class changeMyColor : MonoBehaviour {
 	public Color yellowish;
 	public Color white;
 	private float yellowSlide;
+	private float y2;
 
 	// Use this for initialization
 	void Start () {
@@ -24,7 +25,7 @@ public class changeMyColor : MonoBehaviour {
 
 			yellowSlide = .33f * ( Mathf.Abs (playerBody.position.x - gameObject.transform.position.x));
 			print (yellowSlide);
-			playerColor.color = new Color(1f, 1f, yellowSlide, 1f);
+			playerColor.color = new Color(1f, 1f, yellowSlide+0.4f, 1f);
 
 			/*if (3.3 - Mathf.Abs (playerBody.position.x - gameObject.transform.position.x) > 2) {
 				playerColor.color = yellowish;
