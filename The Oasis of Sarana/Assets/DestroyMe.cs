@@ -21,7 +21,7 @@ public class DestroyMe : MonoBehaviour {
 		}
 	}
 	void OnCollisionStay(Collision c){
-		print (c.gameObject.name);
+		
 		if (c.gameObject.name == "CapsulePlayer") {
 			//print (c.gameObject.name);
 			destroyTime++;
