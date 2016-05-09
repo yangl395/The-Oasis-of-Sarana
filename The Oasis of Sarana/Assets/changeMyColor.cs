@@ -3,7 +3,7 @@ using System.Collections;
 
 public class changeMyColor : MonoBehaviour {
 
-	public bool inLight = false;
+	public bool inLight = true;
 	public Rigidbody playerBody;
 	public SpriteRenderer playerColor;
 	public Color yellowish;
@@ -23,9 +23,9 @@ public class changeMyColor : MonoBehaviour {
 
 		if (inLight == true) {
 
-			yellowSlide = .33f * ( Mathf.Abs (playerBody.position.x - gameObject.transform.position.x));
+			yellowSlide = 6.8f * ( Mathf.Abs (playerBody.position.x - gameObject.transform.position.x));
 			print (yellowSlide);
-			playerColor.color = new Color(1f, 1f, yellowSlide+0.4f, 1f);
+			playerColor.color = new Color(1f, 1f, yellowSlide-0.2f, 1f);
 
 			/*if (3.3 - Mathf.Abs (playerBody.position.x - gameObject.transform.position.x) > 2) {
 				playerColor.color = yellowish;
@@ -49,7 +49,7 @@ public class changeMyColor : MonoBehaviour {
 	void OnTriggerExit (Collider other) {
 
 		if (other.CompareTag ("Player")) {
-		inLight = false;
+		//inLight = false;
 		}
 
 	}
