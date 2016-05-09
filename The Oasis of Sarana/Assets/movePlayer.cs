@@ -4,7 +4,7 @@ using System.Collections;
 public class movePlayer : MonoBehaviour {
 
 	public bool jump = false;
-
+	public int hp = 100;
 	// Use this for initialization
 	void Start () {
 
@@ -14,7 +14,6 @@ public class movePlayer : MonoBehaviour {
 	// Update is called once per frame
 
 	void OnCollisionEnter (Collision other){
-		print (other.gameObject.tag);
 		if (other.gameObject.tag == "Tower") {
 			if (jump) {
 				if (other.gameObject.name == "Shooter") {
