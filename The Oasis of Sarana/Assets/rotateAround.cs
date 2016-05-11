@@ -23,6 +23,9 @@ public class rotateAround : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
+		if (!GameObject.Find ("Boss")) {
+			shakeMe ();
+		}
 		if (isShaking) {
 			shaking++;
 			Camera.main.transform.localPosition = vp + new Vector3 (Random.Range (-0.15f, 0.15f), Random.Range (-0.15f, 0.15f), Random.Range (-0.15f, 0.15f));
