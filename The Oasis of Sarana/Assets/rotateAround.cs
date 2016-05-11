@@ -25,8 +25,10 @@ public class rotateAround : MonoBehaviour {
 	void Update () {
 		if (!GameObject.Find ("Boss")) {
 			shakeMe ();
+			speed += 0.08f; 
 		}
-		if (transform.position.y < -3f) {
+		if (Player.transform.position.y < -3f) {
+			print ("die");
 			Player.GetComponent<movePlayer> ().die ();
 		}
 		if (isShaking) {

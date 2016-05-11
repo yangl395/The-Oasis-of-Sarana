@@ -14,7 +14,9 @@ public class destroyBall : MonoBehaviour {
 	void Update () {
 		destroyTime++;
 		if (destroyTime == 50) {
+			GameObject.Find ("Rotation").GetComponent<rotateAround> ().shakeMe ();
 			Destroy (gameObject);
+
 		}
 	}
 

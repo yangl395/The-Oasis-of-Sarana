@@ -15,6 +15,7 @@ public class movePlayer : MonoBehaviour {
 	}
 	public void die(){
 		Application.LoadLevel ("death");
+
 	}
 	// Update is called once per frame
 

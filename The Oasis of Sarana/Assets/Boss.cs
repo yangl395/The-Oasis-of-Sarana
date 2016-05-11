@@ -26,7 +26,7 @@ public class Boss : MonoBehaviour {
 		if (hp <= 0) {
 			Destroy (gameObject);
 			GameObject p = GameObject.Find ("Rotation");
-
+			GameObject.Find ("Debris").GetComponent<AudioSource> ().Play ();
 			for(int i=0; i<GameObject.Find ("Debris").gameObject.transform.childCount; i++)
 			{
 				GameObject.Find ("Debris").gameObject.transform.GetChild(i).gameObject.active = true;
