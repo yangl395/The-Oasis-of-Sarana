@@ -13,18 +13,23 @@ public class DestroyMe : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-		if (destroyTime == 35) {
+		if (destroyTime > 0) {
+			destroyTime++;
+		}
+		if (destroyTime == 30) {
 			GetComponent<MeshCollider> ().enabled = false;
 			Rigidbody newRigidBodyComponent = gameObject.AddComponent<Rigidbody>();
 			GetComponent<Rigidbody> ().useGravity = true;
 		}
 	}
-	void OnCollisionStay(Collision c){
+	void OnCollisionEnter(Collision c){
 		
 		if (c.gameObject.name == "CapsulePlayer") {
+			if (c.gameObject.GetComponent<Rigidbody> ().velocity.y < -0.2f) {
+				GameObject.Find ("CapsulePlayer").GetComponent<movePlayer> ().die ();
+			}
 			//print (c.gameObject.name);
-			destroyTime++;
+			destroyTime=1;
 		}
 	}
 			

@@ -81,6 +81,7 @@
 'Assets/MoveFireballBoss.cs'
 'Assets/Shooter.cs'
 'Assets/changeMyColor.cs'
+'Assets/destroyBall.cs'
 'Assets/lockY.cs'
 'Assets/lookAtMe.cs'
 'Assets/moveFireball.cs'
