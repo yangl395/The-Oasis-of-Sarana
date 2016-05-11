@@ -14,7 +14,7 @@ public class movePlayer : MonoBehaviour {
 
 	}
 	public void die(){
-		print ("die");
+		Application.LoadLevel ("death");
 	}
 	// Update is called once per frame
 
@@ -29,6 +29,9 @@ public class movePlayer : MonoBehaviour {
 		}
 	}
 	void Update(){
+		if (hp < 0) {
+			die ();
+		}
 		if (isHit) {
 			a += 0.5f;
 			var col = myChar.GetComponent<SpriteRenderer> ().color;
