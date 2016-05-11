@@ -5,7 +5,7 @@ public class wind : MonoBehaviour {
 
 	// Use this for initialization
 
-	float rot,vx,vz;
+	public float rot,vx,vz;
 	int timer=300;
 	void Start () {
 		rot = 0;

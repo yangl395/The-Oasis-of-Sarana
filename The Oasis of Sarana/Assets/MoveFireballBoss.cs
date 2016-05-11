@@ -18,6 +18,7 @@ public class MoveFireballBoss : MonoBehaviour {
 			print (myPlayer.hp);
 			myPlayer.hp--;
 			print (myPlayer.hp);
+			myPlayer.hit ();
 		}
 	}
 }

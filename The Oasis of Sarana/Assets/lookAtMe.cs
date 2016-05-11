@@ -21,7 +21,7 @@ public class lookAtMe : MonoBehaviour {
 		}
 		fireTime++;
 		if (fireTime >= 60) {
-			if (Rd < 0.2f) {
+			if (Rd < 0.6f) {
 				if (fireTime % 10 == 0) {
 					FireBall ();
 				}

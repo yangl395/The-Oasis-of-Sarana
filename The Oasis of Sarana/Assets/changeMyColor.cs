@@ -10,17 +10,20 @@ public class changeMyColor : MonoBehaviour {
 	public Color white;
 	private float yellowSlide;
 	private float y2;
-
+	private wind myWind;
 	// Use this for initialization
 	void Start () {
-
+		myWind=GameObject.Find("wind").GetComponent<wind> ();
 		playerColor = GameObject.Find("char").GetComponent<SpriteRenderer> ();
 	
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		//GetComponent<ParticleSystem> ().forceOverLifetime.x= myWind.vx;
 
+
+		//= new Vector3 (myWind.vx, myWind.vz, 0.06f);
 		if (inLight == true) {
 
 			yellowSlide = 6.8f * ( Mathf.Abs (playerBody.position.x - gameObject.transform.position.x));

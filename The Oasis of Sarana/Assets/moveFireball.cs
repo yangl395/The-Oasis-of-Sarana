@@ -19,6 +19,7 @@ public class moveFireball : MonoBehaviour {
 		
 		if (c.gameObject.name == "Boss") {
 			myBoss.hp--;
+			myBoss.hit ();
 			GameObject.Find ("Rotation").GetComponent<rotateAround> ().shakeMe ();
 			Destroy (gameObject);
 
