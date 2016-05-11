@@ -35,8 +35,8 @@ public class wind : MonoBehaviour {
 			transform.position = new Vector3 (vx, transform.position.y, vz);
 
 			GetComponent<ParticleSystem> ().startSpeed = 4.1f;
+			GetComponent<AudioSource> ().Play (0);
 		}
-
-
+		GetComponent<AudioSource> ().volume = GetComponent<ParticleSystem> ().startSpeed / 8.1f;
 	}
 }
