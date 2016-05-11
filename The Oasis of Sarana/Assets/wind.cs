@@ -9,6 +9,10 @@ public class wind : MonoBehaviour {
 	int timer=300;
 	void Start () {
 		rot = 0;
+		vx = -Mathf.Sin (rot / 180 * Mathf.PI) * 3;
+		vz = Mathf.Cos (rot / 180 * Mathf.PI) * 3;
+		transform.eulerAngles = new Vector3(19,-rot-180,180);
+		transform.position = new Vector3 (vx, transform.position.y, vz);
 	}
 	
 	// Update is called once per frame
