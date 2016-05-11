@@ -37,6 +37,7 @@ public class lookAtMe : MonoBehaviour {
 	}
 
 	void FireBall (){
+		GameObject.Find ("sk").GetComponent<Animator> ().SetTrigger ("Fire");
 		Instantiate (fireball, transform.position, transform.rotation);
 	}
 }

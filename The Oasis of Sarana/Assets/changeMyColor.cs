@@ -24,8 +24,8 @@ public class changeMyColor : MonoBehaviour {
 		if (inLight == true) {
 
 			yellowSlide = 6.8f * ( Mathf.Abs (playerBody.position.x - gameObject.transform.position.x));
-			print (yellowSlide);
-			playerColor.color = new Color(1f, 1f, yellowSlide-0.2f, 1f);
+			//print (yellowSlide);
+			playerColor.color = new Color(1f, 1f, yellowSlide+0.4f, 1f);
 
 			/*if (3.3 - Mathf.Abs (playerBody.position.x - gameObject.transform.position.x) > 2) {
 				playerColor.color = yellowish;
