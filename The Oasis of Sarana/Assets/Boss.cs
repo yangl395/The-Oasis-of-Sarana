@@ -5,11 +5,14 @@ public class Boss : MonoBehaviour {
 
 	// Use this for initialization
 	public int hp=10;
-	private GameObject mySkull;
+	private GameObject mySkull,mySk,myHand1,myHand2;
 	float a=0;
 	bool isHit=false;
 	void Start () {
 		mySkull = GameObject.Find ("Skull Head");
+		mySk=GameObject.Find ("sk");
+		myHand1=GameObject.Find ("hand1");
+		myHand2=GameObject.Find ("hand2");
 	}	
 	
 	// Update is called once per frame
@@ -27,10 +30,13 @@ public class Boss : MonoBehaviour {
 				a = 0f;
 			}
 			mySkull.GetComponent<SpriteRenderer> ().color = col;
+			mySk.GetComponent<SpriteRenderer> ().color = col;
+			myHand1.GetComponent<SpriteRenderer> ().color = col;
+			myHand2.GetComponent<SpriteRenderer> ().color = col;
 		}
 	}
 	public void hit(){
 		isHit = true;
-
+		GetComponent<AudioSource> ().Play (0);
 	}
 }
