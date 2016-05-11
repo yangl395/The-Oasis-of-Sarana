@@ -5,7 +5,8 @@ public class lookAtMe : MonoBehaviour {
 
 	public Transform target;
 	public GameObject fireball;
-
+	private int fireTime=0;
+	private float Rd;
 	// Use this for initialization
 	void Start () {
 	
@@ -15,9 +16,22 @@ public class lookAtMe : MonoBehaviour {
 	void Update () {
 	
 		transform.LookAt (target);
-
-		if (Input.GetKeyDown (KeyCode.Q)) {
-			FireBall ();
+		if (fireTime == 0) {
+			Rd = Random.Range (0, 1f);
+		}
+		fireTime++;
+		if (fireTime >= 60) {
+			if (Rd < 0.2f) {
+				if (fireTime % 10 == 0) {
+					FireBall ();
+				}
+				if (fireTime == 100) {
+					fireTime = 0;
+				}
+			} else {
+				FireBall ();
+				fireTime = 0;
+			}
 		}
 	
 	}

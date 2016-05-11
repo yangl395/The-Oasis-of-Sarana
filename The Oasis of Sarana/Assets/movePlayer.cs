@@ -10,7 +10,9 @@ public class movePlayer : MonoBehaviour {
 
 
 	}
-	
+	public void die(){
+		print ("die");
+	}
 	// Update is called once per frame
 
 	void OnCollisionEnter (Collision other){
