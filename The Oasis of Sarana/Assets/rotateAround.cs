@@ -26,6 +26,9 @@ public class rotateAround : MonoBehaviour {
 		if (!GameObject.Find ("Boss")) {
 			shakeMe ();
 		}
+		if (transform.position.y < -3f) {
+			Player.GetComponent<movePlayer> ().die ();
+		}
 		if (isShaking) {
 			shaking++;
 			Camera.main.transform.localPosition = vp + new Vector3 (Random.Range (-0.15f, 0.15f), Random.Range (-0.15f, 0.15f), Random.Range (-0.15f, 0.15f));

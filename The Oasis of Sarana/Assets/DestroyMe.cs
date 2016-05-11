@@ -25,8 +25,8 @@ public class DestroyMe : MonoBehaviour {
 	void OnCollisionEnter(Collision c){
 		
 		if (c.gameObject.name == "CapsulePlayer") {
-			if (c.gameObject.GetComponent<Rigidbody> ().velocity.y < -0.2f) {
-				GameObject.Find ("CapsulePlayer").GetComponent<movePlayer> ().die ();
+			if (c.gameObject.GetComponent<Rigidbody> ().velocity.y < -0.8f) {
+				//GameObject.Find ("CapsulePlayer").GetComponent<movePlayer> ().die ();
 			}
 			//print (c.gameObject.name);
 			destroyTime=1;
