@@ -43,6 +43,7 @@ public class movePlayer : MonoBehaviour {
 		}
 	}
 	public void hit(){
+		GetComponent<AudioSource> ().Play ();
 		isHit = true;
 
 	}
