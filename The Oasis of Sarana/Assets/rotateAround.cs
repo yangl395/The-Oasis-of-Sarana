@@ -27,7 +27,7 @@ public class rotateAround : MonoBehaviour {
 			shakeMe ();
 			speed += 0.08f; 
 		}
-		if (Player.transform.position.y < -3f) {
+		if (Player.transform.position.y < -5f) {
 			print ("die");
 			Player.GetComponent<movePlayer> ().die ();
 		}
