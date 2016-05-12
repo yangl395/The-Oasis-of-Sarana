@@ -5,8 +5,6 @@
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll'
 -r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll'
 -r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll'
--r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll'
--r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll'
 -define:UNITY_5_3_0
 -define:UNITY_5_3
@@ -82,6 +80,7 @@
 'Assets/DestroyMe.cs'
 'Assets/MoveFireballBoss.cs'
 'Assets/Shooter.cs'
+'Assets/button.cs'
 'Assets/changeMyColor.cs'
 'Assets/death.cs'
 'Assets/destroyBall.cs'

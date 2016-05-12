@@ -5,8 +5,6 @@
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll'
 -r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll'
 -r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll'
--r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll'
--r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll'
 -define:UNITY_5_3_0
 -define:UNITY_5_3
@@ -83,6 +81,7 @@
 'Assets/MoveFireballBoss.cs'
 'Assets/Shooter.cs'
 'Assets/changeMyColor.cs'
+'Assets/death.cs'
 'Assets/destroyBall.cs'
 'Assets/lockY.cs'
 'Assets/lookAtMe.cs'
@@ -90,6 +89,7 @@
 'Assets/movePlayer.cs'
 'Assets/respawnMe.cs'
 'Assets/rotateAround.cs'
+'Assets/win.cs'
 'Assets/wind.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Xml.Linq.dll'
