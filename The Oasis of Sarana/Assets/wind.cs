@@ -18,7 +18,6 @@ public class wind : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		timer--;
-		GetComponent<ParticleSystem> ().startSpeed = timer/300f*8.1f;
 		if (timer == -40) {
 			timer = 300;
 			float r = Random.Range (0, 1f);
